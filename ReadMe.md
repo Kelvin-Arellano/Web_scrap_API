@@ -70,11 +70,13 @@
    weekend and hope that it runs to completion soon.
    
 ## Modeling
+Predivtive</br>
 Using Scikit-learn 6 classification models were crated.
 - Logistic Regression 
 - LinearSVC
 - Bernouli Naive Bayse
-
+Recommendation</br>
+- KNN
 
 If worse comes to worse the accuracy score for my model isn't terrible and I can spend the weekend trying to find 
 solutions such as using remote services or moving on to neural networks and recommendation systems.
