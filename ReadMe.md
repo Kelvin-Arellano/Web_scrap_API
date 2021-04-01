@@ -36,6 +36,12 @@
 5. Test different models with different hyper perameters and use cross validation
 6. Implement the different models to preform on the data set
 
+## Methodology 2
+1. Webscrape goodreads for additional data on the negative class
+2. Preform EDA to figure out on what basis to group the books in
+3. Test KNN model
+4. Create Function to group like books together and return list of books
+
 ## Results
 
    For this project I started with a giant dataset, it was an issue to even load the data. So the
@@ -65,17 +71,27 @@
    as well as predicting better on the Possitve class without sacrificing much on the Negative class
     
    Next we moved on to hypertunning the parameters using grid search for Logistic Regression, unfortunaltly
-   because of the size of the data set and the stregnth of my computer it has been running for more then 24 
-   Hours and I've yet to find a solution for the processing time. I have no choice but to let it run over the 
-   weekend and hope that it runs to completion soon.
+   because of the size of the data set and the stregnth of my computer it was never able to manafest and converge 
+   so I needed to move on and focus on other aspects for my second model.
+   
+   For the reccomendation model I needed additional data and with this I implemented a simple KNN model to be able to 
+   return like books.
+   ![distribution](./images/Most Frequent Author.png)<br>
+   ![distribution](./images/Most Frequent Books.png)<br>
+   
+   Grouping them together according to their dummied catagories returned a result that I was able to use. 
+   ![distribution](./images/Recommendations.png)<br>
+
+   
    
 ## Modeling
-Predivtive</br>
+- Predivtive</br>
 Using Scikit-learn 6 classification models were crated.
 - Logistic Regression 
 - LinearSVC
 - Bernouli Naive Bayse
-Recommendation</br>
+For the Reccomendation system I only had a chance to do one interation
+- Recommendation </br>
 - KNN
 
 If worse comes to worse the accuracy score for my model isn't terrible and I can spend the weekend trying to find 
@@ -85,13 +101,15 @@ solutions such as using remote services or moving on to neural networks and reco
 ## Conclusion
 The synthesized data was analyzed and modeled. I saw that when talking about a book the most important thing is to 
 mention the impact of the story and characters as well as inspiring a want to reccommend it to friends or other 
-people. 
+people. With my logistic regrestion model I was able to get a 75% accuracy score and with my recommendation model I was
+able to give fairly accurate predictions on a few of the books. However it does break down when I put in certain books, and I'm not sure why.
 
 
 ## Future Work
 -Tune the Model to better predict on both classes
--Implement a recocmendation system using these classes
--Implement CNN to better improve performance
+-Immplement a version of this project using Neural Networks
+-Get the reccomendation to work with users and all book in the dataframe
+-Deploy the website
 
 ## Repository Structure
 
