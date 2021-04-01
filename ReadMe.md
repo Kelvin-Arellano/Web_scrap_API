@@ -6,6 +6,10 @@
 
    For this project I wanted to better predict what kind of book would make it onto the 
    New York Times Best Sellers List given reviews.
+   By Doing this I hop to help both independent authors and larger publishing houses determine a books 
+   selling potential given just one review.<br>
+   
+   
    The data that I used for reviews can be found at<br>
    https://s3.amazonaws.com/amazon-reviews-pds/tsv/index.txt<br>
    and I accessed the NEW York Times API for the list of books to include. The code for this 
@@ -37,10 +41,17 @@
    For this project I started with a giant dataset, it was an issue to even load the data. So the
    first step had to be to trim it down. I decided to find out the books that made it onto the
    NYT and find the reviews for those, then just match it with the negative class.
-   ![distribution](./images/distribution.png)<br>
+   ![distribution](./images/Data_dist.png)<br>
    This would allow me to get a ballanced data set from the start and then supplement it with
    webscrapping. Once this was done I started cleaning the reviews with regex and lammentizing
    the words with tfidf.<br>
+   ![distribution](./images/Negative.png)<br>
+   This would be the result of the lamentized words for the negative dataset
+   ![distribution](./images/Positive.png)<br>
+   This would be the result of the lamentized words for the positve dataset
+   ![distribution](./images/Combined_Corpus.png)<br>
+   This would be the result for the combined dataset
+   
    
    After this I moved on to modeling, as I wanted to be sure that a book that I said would make it
    on to the list did and that a book that I said would not didn't I was conscerned with both the 
